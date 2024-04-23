@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { styled, useTheme } from '@mui/material/styles';
 import { AppBar, Box, Drawer, List, ListItem, ListItemText, Toolbar, Typography } from '@mui/material';
+import Skills from './skills';
 
 const drawerWidth = 240;
 
@@ -44,7 +45,7 @@ const Homepage = () => {
   const renderContent = (page) => {
     switch (page) {
       case 'Skills':
-        return 'Details about Skills...';
+        return <Skills/>;
       case 'Experience':
         return 'Details about Experience...';
       case 'Education':
@@ -79,7 +80,6 @@ const Homepage = () => {
         </List>
       </DrawerStyled>
       <Main open={open}>
-        <Toolbar />
         <Typography paragraph>
           {renderContent(selectedPage)}
         </Typography>
