@@ -23,23 +23,6 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
   }),
 );
 
-const AppBarStyled = styled(AppBar, {
-  shouldForwardProp: (prop) => prop !== 'open',
-})(({ theme, open }) => ({
-  transition: theme.transitions.create(['margin', 'width'], {
-    easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen,
-  }),
-  ...(open && {
-    width: `calc(100% - ${drawerWidth}px)`,
-    marginLeft: drawerWidth,
-    transition: theme.transitions.create(['margin', 'width'], {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  }),
-}));
-
 const DrawerStyled = styled(Drawer)(({ theme }) => ({
   width: drawerWidth,
   flexShrink: 0,
@@ -52,16 +35,33 @@ const DrawerStyled = styled(Drawer)(({ theme }) => ({
 const Homepage = () => {
   const theme = useTheme();
   const [open, setOpen] = React.useState(true);
+  const [selectedPage, setSelectedPage] = React.useState('Home');
+
+  const handleListItemClick = (text) => {
+    setSelectedPage(text);
+  };
+
+  const renderContent = (page) => {
+    switch (page) {
+      case 'Skills':
+        return 'Details about Skills...';
+      case 'Experience':
+        return 'Details about Experience...';
+      case 'Education':
+        return 'Details about Education...';
+      case 'About':
+        return 'Details about About...';
+      case 'Contact':
+        return 'Details about Contact...';
+      default:
+        return 'Welcome to the Homepage!';
+    }
+  };
 
   return (
     <Box sx={{ display: 'flex' }}>
-      
-      <DrawerStyled
-        variant="persistent"
-        anchor="left"
-        open={open}
-      >
-        <Box
+      <DrawerStyled variant="persistent" anchor="left" open={open}>
+      <Box
           sx={{
             width: drawerWidth,
             height: 200,
@@ -71,8 +71,8 @@ const Homepage = () => {
           }}
         />
         <List>
-          {[ 'Skills', 'Experience', 'Education', 'About', 'Contact'].map((text, index) => (
-            <ListItem button key={text}>
+          {['Home', 'Skills', 'Experience', 'Education', 'About', 'Contact'].map((text) => (
+            <ListItem button key={text} onClick={() => handleListItemClick(text)}>
               <ListItemText primary={text} />
             </ListItem>
           ))}
@@ -81,7 +81,7 @@ const Homepage = () => {
       <Main open={open}>
         <Toolbar />
         <Typography paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          {renderContent(selectedPage)}
         </Typography>
       </Main>
     </Box>
