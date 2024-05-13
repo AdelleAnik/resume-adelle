@@ -1,7 +1,9 @@
 import * as React from 'react';
-import { styled, useTheme } from '@mui/material/styles';
-import { AppBar, Box, Drawer, List, ListItem, ListItemText, Toolbar, Typography } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import {  Box, Drawer, List, ListItem, ListItemText,  Typography } from '@mui/material';
 import Skills from './skills';
+import Experience from './experience';
+import Education from './education';
 
 const drawerWidth = 240;
 
@@ -34,7 +36,6 @@ const DrawerStyled = styled(Drawer)(({ theme }) => ({
 }));
 
 const Homepage = () => {
-  const theme = useTheme();
   const [open, setOpen] = React.useState(true);
   const [selectedPage, setSelectedPage] = React.useState('Home');
 
@@ -47,11 +48,9 @@ const Homepage = () => {
       case 'Skills':
         return <Skills/>;
       case 'Experience':
-        return 'Details about Experience...';
+        return <Experience/>;
       case 'Education':
-        return 'Details about Education...';
-      case 'About':
-        return 'Details about About...';
+        return <Education/>;
       case 'Contact':
         return 'Details about Contact...';
       default:
@@ -72,7 +71,7 @@ const Homepage = () => {
           }}
         />
         <List>
-          {['Home', 'Skills', 'Experience', 'Education', 'About', 'Contact'].map((text) => (
+          {['Home', 'Skills', 'Experience', 'Education', 'Contact'].map((text) => (
             <ListItem button key={text} onClick={() => handleListItemClick(text)}>
               <ListItemText primary={text} />
             </ListItem>

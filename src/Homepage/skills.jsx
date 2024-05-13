@@ -10,11 +10,10 @@ const Skills = () => {
     return (
         <Grid container spacing={2} justifyContent="center" style={{ marginTop: '20px' }}>
             <Grid item xs={12} md={6} lg={4}>
-            <Typography variant="h5" component="h2" gutterBottom>
+                <Paper elevation={3} style={{ padding: '20px' }}>
+                    <Typography variant="h5" component="h2" gutterBottom>
                         Technical Skills
-                    </Typography>               
-                     <Paper elevation={3} style={{ padding: '20px' }}>
-                   
+                    </Typography>
                     <List>
                         {skills.map((skill, index) => (
                             <ListItem key={index}>
