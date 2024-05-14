@@ -4,6 +4,7 @@ import {  Box, Drawer, List, ListItem, ListItemText,  Typography } from '@mui/ma
 import Skills from './skills';
 import Experience from './experience';
 import Education from './education';
+import image from '../Images/360_F_89026793_eyw5a7WCQE0y1RHsizu41uhj7YStgvAA.jpg'
 
 const drawerWidth = 240;
 
@@ -52,9 +53,19 @@ const Homepage = () => {
       case 'Education':
         return <Education/>;
       case 'Technologies':
-        return 'Details about Contact...';
+        return 'Details about technologies...';
       default:
-        return 'Welcome to the Homepage!';
+        return (
+          <div>
+            <Typography variant="h5">
+              Hello! Welcome to Adelle's Resume 
+            </Typography>
+            <img src={image}  alt="logo" />
+            <Typography variant="h6">
+             The website is currently under construction, but feel free to take a look around 😉
+            </Typography>
+          </div>
+        );
     }
   };
 
