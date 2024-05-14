@@ -37,7 +37,7 @@ const DrawerStyled = styled(Drawer)(({ theme }) => ({
 }));
 
 const Homepage = () => {
-  const [open, setOpen] = React.useState(true);
+  const [open] = React.useState(true);
   const [selectedPage, setSelectedPage] = React.useState('Home');
 
   const handleListItemClick = (text) => {
