@@ -51,7 +51,7 @@ const Homepage = () => {
         return <Experience/>;
       case 'Education':
         return <Education/>;
-      case 'Contact':
+      case 'Technologies':
         return 'Details about Contact...';
       default:
         return 'Welcome to the Homepage!';
@@ -71,7 +71,7 @@ const Homepage = () => {
           }}
         />
         <List>
-          {['Home', 'Skills', 'Experience', 'Education', 'Contact'].map((text) => (
+          {['Home', 'Skills', 'Experience', 'Education', 'Technologies'].map((text) => (
             <ListItem button key={text} onClick={() => handleListItemClick(text)}>
               <ListItemText primary={text} />
             </ListItem>
