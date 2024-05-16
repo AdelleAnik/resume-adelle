@@ -3,12 +3,12 @@ import * as React from 'react';
 import reactImage from '../Images/react.png';
 import js from '../Images/download.png';
 import node from '../Images/node.png';
-import postgres from '../Images/postgres.png';
-import graphql from '../Images/graphql.png';
-import html from '../Images/html.png';
-import css from '../Images/css.png';
-import cypress from '../Images/cypress.jpeg';
-import restapi from '../Images/restapi.png';
+// import postgres from '../Images/postgres.png';
+// import graphql from '../Images/graphql.png';
+// import html from '../Images/html.png';
+// import css from '../Images/css.png';
+// import cypress from '../Images/cypress.jpeg';
+// import restapi from '../Images/restapi.png';
 
 const skills = [
     { name: 'React', image: reactImage },
