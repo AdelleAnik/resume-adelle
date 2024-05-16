@@ -9,6 +9,7 @@ import html from '../Images/html.png';
 import css from '../Images/css.png';
 import cypress from '../Images/cypress.jpeg';
 import restapi from '../Images/restapi.png';
+import github from '../Images/github.png';
 
 const skills = [
     { name: 'React', image: reactImage },
@@ -20,6 +21,7 @@ const skills = [
     { name: 'CSS', image: css },
     { name: 'Cypress', image: cypress },
     { name: 'REST/API', image: restapi },
+    { name: 'GitHub', image: github },
 ];
 
 const Skills = () => {
