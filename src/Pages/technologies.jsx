@@ -14,12 +14,12 @@ const skills = [
     { name: 'React', image: reactImage },
     { name: 'JavaScript', image: js },
     { name: 'NodeJs', image: node },
-    { name: 'PostgreSQL', image: postgres },
-    { name: 'GraphQL', image: graphql },
-    { name: 'HTML ', image: html },
-    { name: 'CSS', image: css },
-    { name: 'Cypress', image: cypress },
-    { name: 'REST/API', image: restapi },
+    // { name: 'PostgreSQL', image: postgres },
+    // { name: 'GraphQL', image: graphql },
+    // { name: 'HTML ', image: html },
+    // { name: 'CSS', image: css },
+    // { name: 'Cypress', image: cypress },
+    // { name: 'REST/API', image: restapi },
 ];
 
 const Technologies = () => {
