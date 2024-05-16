@@ -22,11 +22,11 @@ const skills = [
     { name: 'REST/API', image: restapi },
 ];
 
-const Skills = () => {
+const Technologies = () => {
     return (
         <div>
             <Typography variant="h5" component="h2" gutterBottom>
-                Technical Skills
+                Technologies used to create this webiste
             </Typography>
             <Grid container spacing={2} justifyContent="flex-start" style={{ marginTop: '20px' }}>
                 {skills.map((skill, index) => (
@@ -48,4 +48,4 @@ const Skills = () => {
     );
 };
 
-export default Skills;
+export default Technologies;

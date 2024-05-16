@@ -5,6 +5,7 @@ import Skills from './skills';
 import Experience from './experience';
 import Education from './education';
 import image from '../Images/360_F_89026793_eyw5a7WCQE0y1RHsizu41uhj7YStgvAA.jpg'
+import Technologies from './technologies';
 
 const drawerWidth = 240;
 
@@ -53,7 +54,7 @@ const Homepage = () => {
       case 'Education':
         return <Education/>;
       case 'Technologies':
-        return 'Details about technologies...';
+        return <Technologies/>;
       default:
         return (
           <div>
