@@ -1,10 +1,17 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
-import {  Box, Drawer, List, ListItem, ListItemText,  Typography } from '@mui/material';
+import { Box, Drawer, List, ListItem, ListItemIcon, ListItemText, Typography, Avatar } from '@mui/material';
+import HomeIcon from '@mui/icons-material/Home';
+import BuildIcon from '@mui/icons-material/Build';
+import WorkIcon from '@mui/icons-material/Work';
+import SchoolIcon from '@mui/icons-material/School';
+import ComputerIcon from '@mui/icons-material/Computer';
 import Skills from './skills';
 import Experience from './experience';
 import Education from './education';
 import image from '../Images/360_F_89026793_eyw5a7WCQE0y1RHsizu41uhj7YStgvAA.jpg'
+import adelleLogo from '../Images/AdelleGomes.png'
+import Technologies from './technologies';
 
 const drawerWidth = 240;
 
@@ -47,22 +54,22 @@ const Homepage = () => {
   const renderContent = (page) => {
     switch (page) {
       case 'Skills':
-        return <Skills/>;
+        return <Skills />;
       case 'Experience':
-        return <Experience/>;
+        return <Experience />;
       case 'Education':
-        return <Education/>;
+        return <Education />;
       case 'Technologies':
-        return 'Details about technologies...';
+        return <Technologies />;
       default:
         return (
           <div>
             <Typography variant="h5">
               Hello! Welcome to Adelle's Resume 
             </Typography>
-            <img src={image}  alt="logo" />
+            <img src={image} alt="logo" />
             <Typography variant="h6">
-             The website is currently under construction, but feel free to take a look around 😉
+              The website is currently under construction, but feel free to take a look around 😉
             </Typography>
           </div>
         );
@@ -72,19 +79,32 @@ const Homepage = () => {
   return (
     <Box sx={{ display: 'flex' }}>
       <DrawerStyled variant="persistent" anchor="left" open={open}>
-      <Box
+        <Box
           sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
             width: drawerWidth,
             height: 200,
-            backgroundImage: 'url(https://example.com/your-image.jpg)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
           }}
-        />
+        >
+          <Avatar
+            alt="Profile Picture"
+            src={adelleLogo}
+            sx={{ width: 100, height: 100 }}
+          />
+        </Box>
         <List>
-          {['Home', 'Skills', 'Experience', 'Education', 'Technologies'].map((text) => (
-            <ListItem button key={text} onClick={() => handleListItemClick(text)}>
-              <ListItemText primary={text} />
+          {[
+            { text: 'Home', icon: <HomeIcon /> },
+            { text: 'Skills', icon: <BuildIcon /> },
+            { text: 'Experience', icon: <WorkIcon /> },
+            { text: 'Education', icon: <SchoolIcon /> },
+            { text: 'Technologies', icon: <ComputerIcon /> },
+          ].map((item) => (
+            <ListItem button key={item.text} onClick={() => handleListItemClick(item.text)}>
+              <ListItemIcon>{item.icon}</ListItemIcon>
+              <ListItemText primary={item.text} />
             </ListItem>
           ))}
         </List>
