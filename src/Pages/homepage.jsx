@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
-import { Box, Drawer, List, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material';
+import { Box, Drawer, List, ListItem, ListItemIcon, ListItemText, Typography, Avatar } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
 import BuildIcon from '@mui/icons-material/Build';
 import WorkIcon from '@mui/icons-material/Work';
@@ -10,6 +10,7 @@ import Skills from './skills';
 import Experience from './experience';
 import Education from './education';
 import image from '../Images/360_F_89026793_eyw5a7WCQE0y1RHsizu41uhj7YStgvAA.jpg'
+import adelleLogo from '../Images/AdelleGomes.png'
 import Technologies from './technologies';
 
 const drawerWidth = 240;
@@ -80,13 +81,19 @@ const Homepage = () => {
       <DrawerStyled variant="persistent" anchor="left" open={open}>
         <Box
           sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
             width: drawerWidth,
             height: 200,
-            backgroundImage: 'url(https://example.com/your-image.jpg)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
           }}
-        />
+        >
+          <Avatar
+            alt="Profile Picture"
+            src={adelleLogo}
+            sx={{ width: 100, height: 100 }}
+          />
+        </Box>
         <List>
           {[
             { text: 'Home', icon: <HomeIcon /> },
