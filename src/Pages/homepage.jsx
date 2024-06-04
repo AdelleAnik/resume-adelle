@@ -1,6 +1,10 @@
 import * as React from 'react';
-import { styled, useTheme } from '@mui/material/styles';
-import { AppBar, Box, Drawer, List, ListItem, ListItemText, Toolbar, Typography } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import {  Box, Drawer, List, ListItem, ListItemText,  Typography } from '@mui/material';
+import Skills from './skills';
+import Experience from './experience';
+import Education from './education';
+import image from '../Images/360_F_89026793_eyw5a7WCQE0y1RHsizu41uhj7YStgvAA.jpg'
 
 const drawerWidth = 240;
 
@@ -33,8 +37,7 @@ const DrawerStyled = styled(Drawer)(({ theme }) => ({
 }));
 
 const Homepage = () => {
-  const theme = useTheme();
-  const [open, setOpen] = React.useState(true);
+  const [open] = React.useState(true);
   const [selectedPage, setSelectedPage] = React.useState('Home');
 
   const handleListItemClick = (text) => {
@@ -44,17 +47,25 @@ const Homepage = () => {
   const renderContent = (page) => {
     switch (page) {
       case 'Skills':
-        return 'Details about Skills...';
+        return <Skills/>;
       case 'Experience':
-        return 'Details about Experience...';
+        return <Experience/>;
       case 'Education':
-        return 'Details about Education...';
-      case 'About':
-        return 'Details about About...';
-      case 'Contact':
-        return 'Details about Contact...';
+        return <Education/>;
+      case 'Technologies':
+        return 'Details about technologies...';
       default:
-        return 'Welcome to the Homepage!';
+        return (
+          <div>
+            <Typography variant="h5">
+              Hello! Welcome to Adelle's Resume 
+            </Typography>
+            <img src={image}  alt="logo" />
+            <Typography variant="h6">
+             The website is currently under construction, but feel free to take a look around 😉
+            </Typography>
+          </div>
+        );
     }
   };
 
@@ -71,7 +82,7 @@ const Homepage = () => {
           }}
         />
         <List>
-          {['Home', 'Skills', 'Experience', 'Education', 'About', 'Contact'].map((text) => (
+          {['Home', 'Skills', 'Experience', 'Education', 'Technologies'].map((text) => (
             <ListItem button key={text} onClick={() => handleListItemClick(text)}>
               <ListItemText primary={text} />
             </ListItem>
@@ -79,7 +90,6 @@ const Homepage = () => {
         </List>
       </DrawerStyled>
       <Main open={open}>
-        <Toolbar />
         <Typography paragraph>
           {renderContent(selectedPage)}
         </Typography>
