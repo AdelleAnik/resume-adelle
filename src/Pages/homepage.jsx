@@ -80,9 +80,7 @@ const Homepage = () => {
             <Typography variant="h5">
             Welcome to My Professional World
             </Typography>
-           <Paper elevation={3}>
-             <Container maxWidth="md">
-                <Typography variant="h6">
+                <Typography variant="h6" paddingTop={5}>
                 Hello, I'm Adelle Gomes, a dedicated and innovative software engineer with a rich background in full-stack development and a recent focus on frontend technologies. With a Bachelor’s degree in Environmental Control Technology from UNICAMP and advanced programming training from NBCC, I blend a unique perspective on software solutions with technical proficiency.
                 </Typography>
                 <Typography variant="h6">
@@ -91,8 +89,6 @@ const Homepage = () => {
                 <Typography variant="h6">
                 Through this website, I invite you to explore my resume. Whether you are a potential employer, a fellow tech enthusiast, or a collaborator, I look forward to connecting and exploring how we can drive technology forward together.
                 </Typography>
-              </Container>
-            </Paper>
           </div>
         );
     }
