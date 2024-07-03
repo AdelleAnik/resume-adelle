@@ -1,4 +1,4 @@
-import { Typography, Container,  List, ListItem, ListItemText, createTheme, ThemeProvider } from '@mui/material';
+import { Typography, Container, createTheme, ThemeProvider } from '@mui/material';
 import * as React from 'react';
 import Paper from '@mui/material/Paper';
 
@@ -44,13 +44,6 @@ const theme = createTheme({
   },
 });
 
-const achievements = [
-  "Reduced onboarding time by 33% by implementing an intuitive React-based form wizard with real-time validation feedback.",
-  "Increased sign-up conversion rates by 35% through redesigning landing pages and optimizing call-to-action buttons with React, as evidenced by Google Analytics data.",
-  "Fostered a 25% increase in collaborative work among accounting teams by integrating real-time collaborative tools for document editing and financial planning within the React app.",
-  "Reduced p99 latency by 1.2 seconds (40% improvement) by optimizing API calls and using GraphQL for efficient data fetching in the React frontend.",
-  "Mentored a new team member to proficiency within two months, enabling them to develop and deploy complex React features independently through a structured mentorship program."
-];
 
 const Experience = () => {
   return (

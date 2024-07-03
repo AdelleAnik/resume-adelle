@@ -1,4 +1,4 @@
-import { Typography, Grid, Container, createTheme, ThemeProvider } from '@mui/material';
+import { Typography, Grid, Container, createTheme, ThemeProvider, Paper } from '@mui/material';
 import * as React from 'react';
 
 const theme = createTheme({
@@ -54,16 +54,18 @@ const Education = () => {
           <Typography variant="h5" component="h2" gutterBottom color="primary">
             Education
           </Typography>
-          <Grid container spacing={2}>
+          <Grid container spacing={0}>
             {educationDetails.map((education, index) => (
+          <Paper elevation={3}>
               <Grid item xs={12} key={index}>
                 <Typography variant="h6" component="h3" gutterBottom>
                   {education.institution}
                 </Typography>
                 <Typography variant="body1">
                   {education.degree}
-                </Typography>
+                </Typography> 
               </Grid>
+          </Paper>
             ))}
           </Grid>
       </Container>

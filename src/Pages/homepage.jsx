@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { styled, useTheme } from '@mui/material/styles';
-import { Box, Drawer, List, ListItem, ListItemIcon, ListItemText, Typography, Avatar, IconButton, useMediaQuery } from '@mui/material';
+import { Box, Drawer, List, ListItem, ListItemIcon, ListItemText, Typography, Avatar, IconButton, useMediaQuery, Paper, Container } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
 import BuildIcon from '@mui/icons-material/Build';
@@ -10,7 +10,6 @@ import ComputerIcon from '@mui/icons-material/Computer';
 import Skills from './skills';
 import Experience from './experience';
 import Education from './education';
-import image from '../Images/360_F_89026793_eyw5a7WCQE0y1RHsizu41uhj7YStgvAA.jpg';
 import adelleLogo from '../Images/AdelleGomes.png';
 import Technologies from './technologies';
 
@@ -79,12 +78,21 @@ const Homepage = () => {
         return (
           <div>
             <Typography variant="h5">
-              Hello! Welcome to Adelle's Resume
+            Welcome to My Professional World
             </Typography>
-            <img src={image} alt="logo" />
-            <Typography variant="h6">
-              The website is currently under construction, but feel free to take a look around 😉
-            </Typography>
+           <Paper elevation={3}>
+             <Container maxWidth="md">
+                <Typography variant="h6">
+                Hello, I'm Adelle Gomes, a dedicated and innovative software engineer with a rich background in full-stack development and a recent focus on frontend technologies. With a Bachelor’s degree in Environmental Control Technology from UNICAMP and advanced programming training from NBCC, I blend a unique perspective on software solutions with technical proficiency.
+                </Typography>
+                <Typography variant="h6">
+                Over the years, I've contributed to various transformative projects, such as developing a SaaS platform at Profitual Inc. and pioneering generative AI systems at Lateetud. My expertise lies in creating seamless user experiences and scalable software solutions using technologies like JavaScript, React, and Python. I’m passionate about leveraging technology to solve real-world problems, continuously pushing the boundaries of what is possible in digital spaces.
+                </Typography>
+                <Typography variant="h6">
+                Through this website, I invite you to explore my resume. Whether you are a potential employer, a fellow tech enthusiast, or a collaborator, I look forward to connecting and exploring how we can drive technology forward together.
+                </Typography>
+              </Container>
+            </Paper>
           </div>
         );
     }

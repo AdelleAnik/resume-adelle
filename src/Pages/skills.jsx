@@ -67,7 +67,7 @@ const skills = [
 const Skills = () => {
   return (
     <ThemeProvider theme={theme}>
-      <Container maxWidth="md">
+      <Container maxWidth="lg">
           <Typography variant="h5" component="h2" gutterBottom color="primary">
             Technical Skills
           </Typography>
