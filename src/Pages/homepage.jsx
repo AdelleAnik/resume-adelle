@@ -14,7 +14,7 @@ import image from '../Images/360_F_89026793_eyw5a7WCQE0y1RHsizu41uhj7YStgvAA.jpg
 import adelleLogo from '../Images/AdelleGomes.png';
 import Technologies from './technologies';
 
-const drawerWidth = 240;
+const drawerWidth = 250;
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
   ({ theme, open }) => ({
@@ -26,7 +26,7 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
     }),
     marginLeft: 0,
     ...(open && {
-      marginLeft: drawerWidth,
+     marginLeft: (drawerWidth/2 ),
       transition: theme.transitions.create('margin', {
         easing: theme.transitions.easing.easeOut,
         duration: theme.transitions.duration.enteringScreen,

@@ -1,5 +1,6 @@
 import { Typography, Container,  List, ListItem, ListItemText, createTheme, ThemeProvider } from '@mui/material';
 import * as React from 'react';
+import Paper from '@mui/material/Paper';
 
 const theme = createTheme({
   palette: {
@@ -55,36 +56,36 @@ const Experience = () => {
   return (
     <ThemeProvider theme={theme}>
       <Container maxWidth="md">
-        {/* <Paper elevation={3}> */}
-          <Typography variant="h5" component="h2" gutterBottom color="primary">
+         <Typography variant="h5" component="h2" gutterBottom color="primary">
             Experience
           </Typography>
+        <Paper elevation={3}>
           <Typography variant="h6" component="h3" gutterBottom>
             Profitual Inc.
           </Typography>
           <Typography variant="h6" component="h3" gutterBottom>
-            Junior Full-Stack Developer | Fredericton, NB
+            Junior Full-Stack Developer 
           </Typography>
           <Typography variant="body1" gutterBottom>
             Empowering startups with financial independence through innovative SaaS solutions!
           </Typography>
           <Typography variant="body1" gutterBottom>
-            Project: Developed a dynamic web application to enable clients to seamlessly track, budget, and forecast financial expenses.
+            Project: Developed a dynamic SaaS platform to enable clients to seamlessly track, budget, and forecast financial expenses, improved user experience metrics, and mentored new team members for over two years.
           </Typography>
-          <Typography variant="body1" gutterBottom>
+          {/* <Typography variant="body1" gutterBottom>
             Key Achievements:
-          </Typography>
-          <List>
+          </Typography> */}
+          {/* <List>
             {achievements.map((achievement, index) => (
               <ListItem key={index}>
                 <ListItemText primary={achievement} />
               </ListItem>
             ))}
-          </List>
+          </List> */}
           <Typography variant="body1" gutterBottom>
             Expertise: Highly skilled in React/Redux, JavaScript, PostgreSQL, Node.js, Docker, Cypress, and Azure DevOps.
           </Typography>
-        {/* </Paper> */}
+        </Paper>
       </Container>
     </ThemeProvider>
   );

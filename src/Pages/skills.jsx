@@ -10,7 +10,9 @@ import css from '../Images/css.png';
 import cypress from '../Images/cypress.jpeg';
 import restapi from '../Images/restapi.png';
 import github from '../Images/github.png';
-
+import python from '../Images/python.png';
+import redux from '../Images/redux.png';
+import azure from '../Images/azureDevops.png';
 const theme = createTheme({
   palette: {
     primary: {
@@ -48,8 +50,10 @@ const theme = createTheme({
 
 const skills = [
   { name: 'React', image: reactImage },
+  { name: 'Redux', image: redux },
   { name: 'JavaScript', image: js },
   { name: 'NodeJs', image: node },
+  { name: 'Python', image: python },
   { name: 'PostgreSQL', image: postgres },
   { name: 'GraphQL', image: graphql },
   { name: 'HTML', image: html },
@@ -57,6 +61,7 @@ const skills = [
   { name: 'Cypress', image: cypress },
   { name: 'REST/API', image: restapi },
   { name: 'GitHub', image: github },
+  { name: 'Azure DevOps', image: azure }
 ];
 
 const Skills = () => {
