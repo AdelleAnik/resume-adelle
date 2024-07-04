@@ -62,16 +62,6 @@ const Experience = () => {
           <Typography variant="body1" gutterBottom>
             Project: I spearheaded the development of a generative AI system that interprets and answers user queries by dynamically retrieving data from a complex database, implemented robust data handling and processing techniques to ensure accurate and timely responses, thereby enhancing user interaction and satisfaction. Collaborated closely with a cross-functional team,  focused on integrating AI capabilities into existing platforms with an emphasis on scalability and efficiency. Additionally, I employed Python programming skills to develop and optimize the backend processes supporting AI functionalities.
           </Typography>
-          {/* <Typography variant="body1" gutterBottom>
-            Key Achievements:
-          </Typography> */}
-          {/* <List>
-            {achievements.map((achievement, index) => (
-              <ListItem key={index}>
-                <ListItemText primary={achievement} />
-              </ListItem>
-            ))}
-          </List> */}
           <Typography variant="body1" gutterBottom>
             Expertise: Python
           </Typography>
