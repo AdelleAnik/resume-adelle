@@ -81,10 +81,11 @@ const ContactForm = () => {
         
     <ThemeProvider theme={theme}>
       <Container maxWidth="lg">
-      <Typography variant="h5" component="h2" gutterBottom color="primary">
+     
+        <Paper elevation={3} sx={{ padding: 3, margin: 2, maxWidth: 600, mx: "auto" }}>
+          <Typography variant="h5" component="h2" gutterBottom color="primary">
             Contact Me
           </Typography>
-        <Paper elevation={3} sx={{ padding: 3, margin: 2, maxWidth: 600, mx: "auto" }}>
             <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
                 <TextField
                     margin="normal"
