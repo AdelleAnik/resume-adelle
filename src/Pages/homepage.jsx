@@ -9,7 +9,6 @@ import Education from './education';
 import ContactMe from './contactMe';
 import Footer from '../Components/footer';
 
-
 const Main = styled('main')(({ theme, open }) => ({
   flexGrow: 1,
   padding: theme.spacing(3),
