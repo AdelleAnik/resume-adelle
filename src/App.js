@@ -2,7 +2,7 @@ import './App.css';
 import React, { useEffect } from 'react';
 import Homepage from './Pages/homepage';
 import { initGA, logPageView } from './analytics';
-import usePageTracking from './usePageTracking';
+import usePageTracking from './usePackageTracking';
 
 function App() {
   useEffect(() => {
