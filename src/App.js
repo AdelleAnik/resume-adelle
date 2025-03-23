@@ -10,7 +10,7 @@ import './App.css';
 import About from './Pages/AboutMe';
 
 const App = () => {
-  const [activeSection, setActiveSection] = useState('');
+  const [activeSection, setActiveSection] = useState('experience');
 
   const renderSection = () => {
     switch (activeSection) {

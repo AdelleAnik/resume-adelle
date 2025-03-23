@@ -5,14 +5,20 @@ import logo from '../Images/AdelleGomes-removebg-preview.png';
 
 const Home = ({ setActiveSection }) => {
   const [typingDone, setTypingDone] = useState(false);
+  const [activeButton, setActiveButton] = useState('experience');
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setTypingDone(true);
-    }, 970); // match typing animation duration
+    }, 970);
 
     return () => clearTimeout(timer);
   }, []);
+
+  const handleButtonClick = (section) => {
+    setActiveButton(section);
+    setActiveSection(section);
+  };
 
   return (
     <div className="home">
@@ -23,11 +29,36 @@ const Home = ({ setActiveSection }) => {
         <h2 className="subtitle">Software Engineer </h2>
         <h2 className="subtitle2"> Full-Stack Developer | Front-End Developer</h2>
         <div className="nav-buttons">
-          <button onClick={() => setActiveSection('experience')}>Experience</button>
-          <button onClick={() => setActiveSection('skills')}>Skills</button>
-          <button onClick={() => setActiveSection('education')}>Education</button>
-          <button onClick={() => setActiveSection('about')}>About Me</button>
-          <button onClick={() => setActiveSection('contact')}>Contact Me</button>
+          <button
+            onClick={() => handleButtonClick('experience')}
+            className={activeButton === 'experience' ? 'active' : ''}
+          >
+            Experience
+          </button>
+          <button
+            onClick={() => handleButtonClick('skills')}
+            className={activeButton === 'skills' ? 'active' : ''}
+          >
+            Skills
+          </button>
+          <button
+            onClick={() => handleButtonClick('education')}
+            className={activeButton === 'education' ? 'active' : ''}
+          >
+            Education
+          </button>
+          <button
+            onClick={() => handleButtonClick('about')}
+            className={activeButton === 'about' ? 'active' : ''}
+          >
+            About Me
+          </button>
+          <button
+            onClick={() => handleButtonClick('contact')}
+            className={activeButton === 'contact' ? 'active' : ''}
+          >
+            Contact Me
+          </button>
         </div>
       </div>
       <div className="social">@reallygreatsite</div>
@@ -36,5 +67,3 @@ const Home = ({ setActiveSection }) => {
 };
 
 export default Home;
-
-

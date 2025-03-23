@@ -54,6 +54,7 @@
 .subtitle2 {
   color: #aaa;
   font-weight: 300;
+  font-size: 1rem;
   margin-bottom: 2rem;
   animation: fadeIn 2s ease forwards;
   opacity: 0;
@@ -113,4 +114,10 @@
   margin-top: auto;
   font-size: 0.9rem;
   color: #888;
+}
+
+.nav-buttons button.active {
+  background-color: #ff66c4;
+  color: #0e0a1a;
+  box-shadow: 0 0 10px #ff66c4;
 }
