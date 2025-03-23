@@ -1,0 +1,17 @@
+/* BackgroundPulse.css */
+/* .pulse-background {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 65%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 30%, #ff66c4 0%, #5e3fd7 40%, #0e0a1a 80%);
+    filter: blur(100px);
+    animation: pulse 5s ease-in-out infinite;
+    z-index: 0;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+  } */

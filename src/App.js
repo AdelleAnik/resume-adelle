@@ -1,16 +1,37 @@
+import React, { useState } from 'react';
+import Home from './Pages/home';
+import Section from './Pages/Section';
+import Experience from './Pages/experience';
+import Skills from './Pages/skills';
+import Education from './Pages/education';
+import Contact from './Pages/contactMe';
+import BackgroundPulse from './Pages/BackgroundPulse';
 import './App.css';
-import React, { useEffect } from 'react';
-import Homepage from './Pages/homepage';
-import { initGA, logPageView } from './analytics';
+import About from './Pages/AboutMe';
 
-function App() {
-  useEffect(() => {
-    initGA();
-    logPageView();
-  }, []);
+const App = () => {
+  const [activeSection, setActiveSection] = useState('');
+
+  const renderSection = () => {
+    switch (activeSection) {
+      case 'experience': return <Experience />;
+      case 'skills': return <Skills />;
+      case 'education': return <Education />;
+      case 'contact': return <Contact />;
+      case 'about': return <About />;
+      default: return null;
+    }
+  };
+
   return (
-   <Homepage/>
+    <div className="app">
+      <BackgroundPulse />
+      <div className="main">
+        <Home setActiveSection={setActiveSection} />
+        <Section>{renderSection()}</Section>
+      </div>
+    </div>
   );
-}
+};
 
 export default App;

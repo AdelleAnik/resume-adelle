@@ -1,0 +1,116 @@
+/* Home.css */
+.home {
+  width: 35%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  position: relative;
+}
+.main-logo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: contain;
+  align-self: left;
+  margin-bottom: 1rem;
+  border: 2px solid #ff66c4;
+  box-shadow: 0 0 12px rgba(255, 102, 196, 0.3);
+  animation: fadeIn 1.5s ease forwards;
+}
+.home-inner {
+  margin-top: 6rem; /* increased margin to push content down */
+}
+
+.title {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #ff66c4;
+  width: 0;
+  animation: typing 2s steps(20) forwards;
+}
+
+@keyframes typing {
+  0% { width: 0 }
+  100% { width: 100% }
+}
+
+.title.typing-done {
+  border-right: none !important;
+}
+
+.subtitle {
+  color: #aaa;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  animation: fadeIn 2s ease forwards;
+  opacity: 0;
+}
+
+.subtitle2 {
+  color: #aaa;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  animation: fadeIn 2s ease forwards;
+  opacity: 0;
+}
+
+.nav-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+  animation: fadeInButtons 1.5s ease-in-out;
+}
+
+@keyframes fadeInButtons {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.nav-buttons button {
+  background: none;
+  border: 1px solid #ff66c4;
+  color: #ff66c4;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-transform: uppercase;
+  width: 100%;
+  animation: popIn 0.5s ease-in-out;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.nav-buttons button:hover {
+  background-color: #ff66c4;
+  color: #0e0a1a;
+  box-shadow: 0 0 10px #ff66c4;
+}
+
+.social {
+  margin-top: auto;
+  font-size: 0.9rem;
+  color: #888;
+}

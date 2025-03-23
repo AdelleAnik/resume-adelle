@@ -1,103 +1,68 @@
-import { Typography, Container, createTheme, ThemeProvider } from '@mui/material';
-import * as React from 'react';
-import Paper from '@mui/material/Paper';
+// components/Experience.jsx
+import React from 'react';
+import './experience.css';
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#000000',
-    },
-    secondary: {
-      main: '#f50057',
-    },
-    background: {
-      default: '#f5f5f5',
-    },
-  },
-  typography: {
-    h5: {
-      fontWeight: 600,
-    },
-    h6: {
-      color: '#000000',
-    },
-    body1: {
-      color: '#555',
-    },
-  },
-  components: {
-    MuiPaper: {
-      styleOverrides: {
-        root: {
-          padding: '20px',
-          margin: '20px 0',
-        },
-      },
-    },
-    MuiListItemText: {
-      styleOverrides: {
-        primary: {
-          color: '#555',
-        },
-      },
-    },
-  },
-});
-
-
-const Experience = () => {
-  return (
-    <ThemeProvider theme={theme}>
-      <Container maxWidth="lg">
-         <Typography variant="h5" component="h2" gutterBottom color="primary">
-            Experience
-          </Typography>
-        <Paper elevation={3}>
-          <Typography variant="h6" component="h3" gutterBottom>
-            Lateetud
-          </Typography>
-          <Typography variant="h6" component="h3" gutterBottom>
-            Software Engineer
-          </Typography>
-          <Typography variant="body1" gutterBottom>
-            Project: I spearheaded the development of a generative AI system that interprets and answers user queries by dynamically retrieving data from a complex database, implemented robust data handling and processing techniques to ensure accurate and timely responses, thereby enhancing user interaction and satisfaction. Collaborated closely with a cross-functional team,  focused on integrating AI capabilities into existing platforms with an emphasis on scalability and efficiency. Additionally, I employed Python programming skills to develop and optimize the backend processes supporting AI functionalities.
-          </Typography>
-          <Typography variant="body1" gutterBottom>
-            Expertise: Python
-          </Typography>
-        </Paper>
-      </Container>
-      <Container maxWidth="lg">
-        <Paper elevation={3}>
-          <Typography variant="h6" component="h3" gutterBottom>
-            Profitual Inc.
-          </Typography>
-          <Typography variant="h6" component="h3" gutterBottom>
-            Junior Full-Stack Developer 
-          </Typography>
-          <Typography variant="body1" gutterBottom>
-            Empowering startups with financial independence through innovative SaaS solutions!
-          </Typography>
-          <Typography variant="body1" gutterBottom>
-            Project: Developed a dynamic SaaS platform to enable clients to seamlessly track, budget, and forecast financial expenses, improved user experience metrics, and mentored new team members for over two years.
-          </Typography>
-          {/* <Typography variant="body1" gutterBottom>
-            Key Achievements:
-          </Typography> */}
-          {/* <List>
-            {achievements.map((achievement, index) => (
-              <ListItem key={index}>
-                <ListItemText primary={achievement} />
-              </ListItem>
-            ))}
-          </List> */}
-          <Typography variant="body1" gutterBottom>
-            Expertise: Highly skilled in React/Redux, JavaScript, PostgreSQL, Node.js, Docker, Cypress, and Azure DevOps.
-          </Typography>
-        </Paper>
-      </Container>
-    </ThemeProvider>
-  );
+const techIcons = {
+  python: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+  csharp: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg',
+  mysql: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
+  react: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+  redux: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg',
+  javascript: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+  nodejs: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+  postgres: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
+  docker: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
+  cypress: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/cypressio/cypressio-original.svg',
+  azure: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg'
 };
+
+const Experience = () => (
+  <div className="content">
+    <h2 className="section-title">Experience</h2>
+
+    <div className="experience-card">
+      <div className="experience-header">
+        <h3>Lateetud</h3>
+        <span className="role">Software Engineer</span>
+      </div>
+      <p className="description">
+        Spearheaded the development of a generative AI system that interprets and answers user queries by dynamically retrieving data from a complex database. Collaborated with a cross-functional team to integrate scalable AI capabilities and employed Python to develop robust backend processes.
+      </p>
+      <p className="expertise"><strong>Expertise:</strong> React, C#, Python</p>
+      <div className="tech-icons">
+        <img src={techIcons.react} alt="React" title="React" />
+        <img src={techIcons.redux} alt="Redux" title="Redux" />
+        <img src={techIcons.javascript} alt="JavaScript" title="JavaScript" />
+        <img src={techIcons.csharp} alt="C#" />
+        <img src={techIcons.python} alt="Python" title="Python" />
+        <img src={techIcons.azure} alt="Azure DevOps" title="Azure DevOps" />
+        <img src={techIcons.mysql} alt="MySQL" />
+      </div>
+    </div>
+
+    <div className="experience-card">
+      <div className="experience-header">
+        <h3>Profitual Inc.</h3>
+        <span className="role">Junior Full-Stack Developer</span>
+      </div>
+      <p className="description">
+        Developed a dynamic SaaS platform that empowered startups with financial independence. Improved user experience metrics, mentored new team members, and implemented innovative features to streamline financial tracking and forecasting.
+      </p>
+      <p className="expertise">
+        <strong>Expertise:</strong> React, Redux, JavaScript, PostgreSQL, Node.js, Docker, Cypress, Azure DevOps
+      </p>
+      <div className="tech-icons">
+        <img src={techIcons.react} alt="React" title="React" />
+        <img src={techIcons.redux} alt="Redux" title="Redux" />
+        <img src={techIcons.javascript} alt="JavaScript" title="JavaScript" />
+        <img src={techIcons.postgres} alt="PostgreSQL" title="PostgreSQL" />
+        <img src={techIcons.nodejs} alt="Node.js" title="Node.js" />
+        <img src={techIcons.docker} alt="Docker" title="Docker" />
+        <img src={techIcons.cypress} alt="Cypress" title="Cypress" />
+        <img src={techIcons.azure} alt="Azure DevOps" title="Azure DevOps" />
+      </div>
+    </div>
+  </div>
+);
 
 export default Experience;

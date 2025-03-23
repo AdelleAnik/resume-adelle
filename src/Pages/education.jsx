@@ -1,76 +1,45 @@
-import { Typography, Grid, Container, createTheme, ThemeProvider, Paper } from '@mui/material';
-import * as React from 'react';
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#000000',
-    },
-    secondary: {
-      main: '#f50057',
-    },
-    background: {
-      default: '#f5f5f5',
-    },
-  },
-  typography: {
-    h5: {
-      fontWeight: 600,
-    },
-    h6: {
-      color: '#000000',
-    },
-    body1: {
-      color: '#555',
-    },
-  },
-  components: {
-    MuiPaper: {
-      styleOverrides: {
-        root: {
-          padding: '20px',
-          margin: '20px 0',
-        },
-      },
-    },
-  },
-});
+// components/Education.jsx
+import React from 'react';
+import './experience.css';
 
 const educationDetails = [
   {
     institution: 'New Brunswick Community College - NBCC',
     degree: 'IT-Programmer Analyst',
+    year: '2021',
+    // logo: 'https://upload.wikimedia.org/wikipedia/en/3/3f/New_Brunswick_Community_College_logo.png'
   },
   {
     institution: 'Universidade Estadual de Campinas - UNICAMP',
     degree: 'Environmental Control Technology, Environmental Science',
-  },
+    year: '2017',
+    // logo: 'https://upload.wikimedia.org/wikipedia/commons/f/f2/Logo_unicamp.svg'
+  }
 ];
 
-const Education = () => {
-  return (
-    <ThemeProvider theme={theme}>
-      <Container maxWidth="md">
-          <Typography variant="h5" component="h2" gutterBottom color="primary">
-            Education
-          </Typography>
-          <Grid container spacing={0}>
-            {educationDetails.map((education, index) => (
-          <Paper elevation={3}>
-              <Grid item xs={12} key={index}>
-                <Typography variant="h6" component="h3" gutterBottom>
-                  {education.institution}
-                </Typography>
-                <Typography variant="body1">
-                  {education.degree}
-                </Typography> 
-              </Grid>
-          </Paper>
-            ))}
-          </Grid>
-      </Container>
-    </ThemeProvider>
-  );
-};
+const Education = () => (
+  <div className="content">
+    <h2 className="section-title">Education</h2>
+    {educationDetails.map((edu, index) => (
+      <div className="experience-card" key={index}>
+        <div className="experience-header">
+          <h3>
+            {/* <img
+              src={edu.logo}
+              alt={`${edu.institution} logo`}
+              title={edu.institution}
+              style={{ height: '28px', marginRight: '0.5rem', verticalAlign: 'middle' }}
+            /> */}
+            {edu.institution}
+          </h3>
+          <span className="role">{edu.degree}</span>
+        </div>
+        <div style={{ marginTop: '0.5rem', color: '#ccc', fontSize: '0.85rem' }}>
+          🎓 Graduated: {edu.year}
+        </div>
+      </div>
+    ))}
+  </div>
+);
 
 export default Education;
