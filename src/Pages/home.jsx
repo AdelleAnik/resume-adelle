@@ -1,7 +1,10 @@
 // components/Home.jsx
 import React, { useEffect, useState } from 'react';
 import './home.css';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import logo from '../Images/Adelle_Gomes-white-removebg-preview1.png';
+import { Typography } from '@mui/material';
 
 const Home = ({ setActiveSection }) => {
   const [typingDone, setTypingDone] = useState(false);
@@ -61,7 +64,29 @@ const Home = ({ setActiveSection }) => {
           </button>
         </div>
       </div>
-      <div className="social">@reallygreatsite</div>
+      <div className="social">
+        <div className="social-icons">
+          <a
+            href="https://www.linkedin.com/in/adelle-anik-araujo-gomes/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <LinkedInIcon className="icon" />
+          </a>
+          <a
+            href="https://github.com/AdelleAnik"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <GitHubIcon className="icon" />
+          </a>
+          <Typography className="subtitle3">
+            © 2025 Adelle Gomes. All rights reserved.
+          </Typography>
+        </div>
+      </div>
     </div>
   );
 };

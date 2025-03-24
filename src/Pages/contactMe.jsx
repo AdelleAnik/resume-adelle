@@ -1,6 +1,7 @@
 // components/Contact.jsx
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import './contactMe.css';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -33,13 +34,15 @@ const Contact = () => {
   return (
     <div className="content">
       <h2>Contact Me</h2>
-      <form onSubmit={handleSubmit} className="contact-form">
-        <input type="text" name="name" placeholder="Full Name" required onChange={handleChange} />
-        <input type="email" name="email" placeholder="Your Email" required onChange={handleChange} />
-        <input type="text" name="subject" placeholder="Subject" required onChange={handleChange} />
-        <textarea name="message" placeholder="Message" rows="4" required onChange={handleChange} />
-        <button type="submit">Send</button>
-      </form>
+      <div className="contactme-card">
+        <form onSubmit={handleSubmit} className="contact-form">
+          <input type="text" name="name" placeholder="Your Name" required onChange={handleChange} />
+          <input type="email" name="email" placeholder="Your Email" required onChange={handleChange} />
+          <input type="text" name="subject" placeholder="Subject" required onChange={handleChange} />
+          <textarea name="message" placeholder="Message" rows="4" required onChange={handleChange} />
+          <button type="submit">Send</button>
+        </form>
+      </div>
     </div>
   );
 };

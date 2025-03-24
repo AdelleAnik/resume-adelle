@@ -60,6 +60,15 @@
   opacity: 0;
 }
 
+.subtitle3 {
+  color: #aaa;
+  font-weight: 300;
+  font-size: 0.5rem;
+  margin-bottom: 2rem;
+  animation: fadeIn 2s ease forwards;
+  opacity: 0;
+}
+
 .nav-buttons {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
