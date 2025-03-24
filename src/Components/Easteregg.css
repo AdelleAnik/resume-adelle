@@ -1,0 +1,42 @@
+
+.pet-parade {
+    position: fixed;
+    bottom: 0;
+    left: -200px;
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    pointer-events: none;
+    z-index: 9999;
+    animation: pet-slide 10s linear forwards;
+  }
+  .about-wrapper {
+    position: relative;
+    overflow: hidden; /* hides overflow from pet parade */
+  }
+  
+  .pet {
+    height: 60px;
+    animation: hop 1s ease-in-out infinite;
+  }
+  
+  .bunny {
+    animation-delay: 0s;
+  }
+  
+  .cat {
+    animation-delay: 0.5s;
+  }
+  
+  /* Horizontal slide */
+  @keyframes pet-slide {
+    0% { transform: translateX(-200px); }
+    100% { transform: translateX(100vw); }
+  }
+  
+  /* Hop effect */
+  @keyframes hop {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+  

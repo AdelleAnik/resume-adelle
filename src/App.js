@@ -6,12 +6,12 @@ import Skills from './Pages/skills';
 import Education from './Pages/education';
 import Contact from './Pages/contactMe';
 import BackgroundPulse from './Pages/BackgroundPulse';
-import './App.css';
 import About from './Pages/AboutMe';
+import './App.css';
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('experience');
-
+ 
   const renderSection = () => {
     switch (activeSection) {
       case 'experience': return <Experience />;

@@ -31,6 +31,9 @@ const Home = ({ setActiveSection }) => {
         <h1 className={`title ${typingDone ? 'typing-done' : ''}`}>Adelle Gomes</h1>
         <h2 className="subtitle">Software Engineer </h2>
         <h2 className="subtitle2"> Full-Stack Developer | Front-End Developer</h2>
+        <p className="subtitle2">
+          Hi! 👋 I'm Adelle Gomes, a passionate Software Engineer with a love for blending creativity and logic into sleek, user-focused digital experiences. My journey into development started with a curiosity for how things work and evolved into a full-blown obsession with writing code.
+        </p>
         <div className="nav-buttons">
           <button
             onClick={() => handleButtonClick('experience')}

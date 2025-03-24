@@ -14,13 +14,13 @@
   border-radius: 50%;
   object-fit: contain;
   align-self: left;
-  margin-bottom: 1rem;
   border: 2px solid #ff66c4;
   box-shadow: 0 0 12px rgba(255, 102, 196, 0.3);
   animation: fadeIn 1.5s ease forwards;
 }
 .home-inner {
-  margin-top: 6rem; /* increased margin to push content down */
+  margin-top: 4rem; /* increased margin to push content down */
+   gap: 2.5rem;
 }
 
 .title {
@@ -43,6 +43,12 @@
   border-right: none !important;
 }
 
+.section-title {
+  font-size: 2rem;
+  color: #f9f;
+  margin-bottom: 2rem;
+}
+
 .subtitle {
   color: #aaa;
   font-weight: 300;
@@ -62,9 +68,9 @@
 
 .subtitle3 {
   color: #aaa;
-  font-weight: 300;
+  font-weight: 100;
   font-size: 0.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   animation: fadeIn 2s ease forwards;
   opacity: 0;
 }
@@ -73,7 +79,8 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
   animation: fadeInButtons 1.5s ease-in-out;
 }
 
@@ -152,8 +159,9 @@
 }
 
 .skills-section {
-  margin: 2rem;
-  padding: 1rem;
+  max-width: 800px; /* Optional: matches experience cards */
+  margin: 0 auto 4rem auto; /* horizontally center, add bottom spacing */
+  padding: 0 1.5rem;
   color: #fff;
 }
 
