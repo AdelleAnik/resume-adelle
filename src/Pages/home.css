@@ -125,8 +125,73 @@
   color: #888;
 }
 
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.social-icons .icon {
+  color: white;
+  font-size: 2rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+
+.social-icons .icon:hover {
+  transform: scale(1.2);
+  color: #ff99cc; /* use your brand accent color here */
+}
+
+
 .nav-buttons button.active {
   background-color: #ff66c4;
   color: #0e0a1a;
   box-shadow: 0 0 10px #ff66c4;
+}
+
+.skills-section {
+  margin: 2rem;
+  padding: 1rem;
+  color: #fff;
+}
+
+.skills-title {
+  color: #ff99cc;
+  font-size: 1.6rem;
+  font-family: 'Courier New', monospace;
+  margin-bottom: 1rem;
+}
+
+.skill-category {
+  color: #ff99cc;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1.5rem 0 0.5rem;
+  font-family: 'Courier New', monospace;
+}
+
+.skill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 3rem; /* Add bottom spacing between groups */
+}
+
+.skill-tag {
+  padding: 8px 14px;
+  border: 1px solid #ff99cc;
+  border-radius: 6px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  color: #ffffff;
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+
+.skill-tag:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 153, 204, 0.1);
+  box-shadow: 0 0 8px #ff99cc;
 }
