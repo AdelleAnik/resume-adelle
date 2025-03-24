@@ -1,7 +1,7 @@
 // components/Home.jsx
 import React, { useEffect, useState } from 'react';
 import './home.css';
-import logo from '../Images/AdelleGomes-removebg-preview.png';
+import logo from '../Images/Adelle_Gomes-white-removebg-preview1.png';
 
 const Home = ({ setActiveSection }) => {
   const [typingDone, setTypingDone] = useState(false);
