@@ -19,7 +19,18 @@ body, html, #root, .app {
 .content {
   max-width: 800px;
   margin: auto;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #ddd; 
 }
+
+.content p {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
 
 .content h2 {
   font-size: 2rem;

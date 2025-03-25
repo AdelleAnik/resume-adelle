@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 const useKonamiCode = (onMatch) => {
   useEffect(() => {
-    const sequence = ['ArrowUp','ArrowUp','ArrowDown'];
+    const sequence = ['ArrowUp','ArrowDown','ArrowUp'];
     let index = 0;
 
     const handler = (e) => {

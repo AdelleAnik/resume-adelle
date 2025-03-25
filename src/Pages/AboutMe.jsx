@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../Components/Easteregg.css'; // contains the pet-parade animation styles
+import '../Pages/AboutMe.css'; // contains the pet-parade animation styles
 import useKonamiCode from '../Components/KonamiCode';
 import bunnyGif from '../Images/01636c5434cd0462086620c60fdfec16.gif';
 import catGif from '../Images/catgif.gif';
@@ -9,7 +10,7 @@ const About = () => {
 
   useKonamiCode(() => {
     setShowPets(true);
-    setTimeout(() => setShowPets(false), 10000); // hide after 10s
+    setTimeout(() => setShowPets(false), 7000); // hide after 10s
   });
 
   return (
@@ -17,17 +18,25 @@ const About = () => {
       <div className="content">
         <h2>About Me</h2>
         <p>
-          I'm Adelle Gomes, a passionate Software Engineer with a love for blending creativity and logic into sleek, user-focused digital experiences. My journey into development started with a curiosity for how things work and evolved into a full-blown obsession with writing clean, scalable code.
+          Outside of work, you’ll usually find me singing (sometimes mid-cook 🎶), dancing around the house, or whipping up something delicious from scratch. I love cooking and baking almost as much as I love JavaScript (almost). I also play the guitar, and my love for music runs deep — it keeps me grounded and inspired. 🎸🎵
         </p>
+
         <p>
-          I bring experience across front-end and back-end technologies — from React and Redux to Node.js, PostgreSQL, and Docker. I thrive in collaborative environments, enjoy mentoring, and am constantly seeking to improve through new challenges.
+          I’m a big fan of board games ♟️ and video games 🎮 — especially when it means sharing laughs with friends. Whether it’s a round of cooperative strategy or a chaotic party game, I’m all in.
         </p>
+
         <p>
-          When I'm not coding, you'll find me sketching UI ideas, geeking out over design systems, or experimenting with new web animations. ✨
+          And yes — I’m a proud <span className="ravenclaw">Ravenclaw</span> 💙🦅 and a longtime Harry Potter fan.
+          If you ever need someone for magical trivia, let me know!!
+          <br />
+          <em className="hp-quote">“Wit beyond measure is man’s greatest treasure.”</em>
         </p>
+
         <p>
-          I also share my space with two pixel-perfect sidekicks — a gray cat and a black-and-white bunny. They don’t code, but if you know the secret sequence, you might just see them hop by. 🐾
+          I also share my space with two pixel-perfect sidekicks — a gray cat and a black-and-white bunny.
+          They don’t code, but if you know the secret sequence, you might just see them <span className="hop-hint">hop</span> by. 🐾
         </p>
+
 
         {showPets && (
           <div className="pet-parade">

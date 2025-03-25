@@ -1,0 +1,89 @@
+.ravenclaw {
+    position: relative;
+    font-weight: bold;
+    cursor: pointer;
+    color: #80b3ff;
+    transition: all 0.3s ease;
+  }
+  
+  .ravenclaw:hover {
+    color: #b3d1ff;
+    text-shadow: 0 0 8px #80b3ff;
+  }
+  
+  .ravenclaw::after {
+    content: "✨";
+    position: absolute;
+    right: -1.2rem;
+    top: -0.3rem;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+  }
+  
+  .ravenclaw:hover::after {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  
+  /* Optional: floating quote fade-in */
+  .hp-quote {
+    display: block;
+    margin-top: 0.5rem;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #aaa;
+    opacity: 0.8;
+    animation: fadeInQuote 1s ease forwards;
+  }
+  
+  @keyframes fadeInQuote {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 0.8; transform: translateY(0); }
+  }
+  
+
+  .hop-hint {
+    position: relative;
+    color: #ff99cc;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .hop-hint:hover {
+    color: #fff;
+    animation: hopWiggle 0.5s ease;
+    text-shadow: 0 0 6px #ff99cc;
+  }
+  
+  .hop-hint::after {
+    content: "↑ ↓ ↑";
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1a112d;
+    color: #ffccff;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 2px 6px rgba(255, 102, 196, 0.3);
+  }
+  
+  .hop-hint:hover::after {
+    opacity: 1;
+  }
+  
+  @keyframes hopWiggle {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-2px); }
+    50% { transform: translateY(2px); }
+    75% { transform: translateY(-1px); }
+    100% { transform: translateY(0); }
+  }
+  
