@@ -32,7 +32,7 @@ const Home = ({ setActiveSection }) => {
         <h2 className="subtitle">Software Engineer </h2>
         <h2 className="subtitle2"> Full-Stack Developer | Front-End Developer</h2>
         <p className="subtitle2">
-          Hi! 👋 I'm a passionate Software Engineer with a love for blending creativity and logic into sleek, user-focused digital experiences. My journey into development started with a curiosity for how things work and evolved into a full-blown obsession with writing code.
+        Hi! 👋 I’m Adelle — a curious mind with a keyboard. I’m a software engineer who sees code as a language for building thoughtful, intuitive things. What started as “how does this work?” became “what can I create next?”
         </p>
         <div className="nav-buttons">
           <button
