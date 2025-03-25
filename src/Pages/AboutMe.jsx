@@ -10,7 +10,7 @@ const About = () => {
 
   useKonamiCode(() => {
     setShowPets(true);
-    setTimeout(() => setShowPets(false), 7000); // hide after 10s
+    setTimeout(() => setShowPets(false), 7000); // hide after 7s
   });
 
   return (
@@ -36,7 +36,6 @@ const About = () => {
           I also share my space with two pixel-perfect sidekicks — a gray cat and a black-and-white bunny.
           They don’t code, but if you know the secret sequence, you might just see them <span className="hop-hint">hop</span> by. 🐾
         </p>
-
 
         {showPets && (
           <div className="pet-parade">
