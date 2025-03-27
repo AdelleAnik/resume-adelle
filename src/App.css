@@ -18,11 +18,13 @@ body, html, #root, .app {
 /* General styles for content */
 .content {
   max-width: 800px;
-  margin: auto;
+  margin: 0 auto; /* ✅ ensure full center horizontally */
+  padding: 0 1rem; /* ✅ avoid touching screen edges */
   font-size: 1.05rem;
   line-height: 1.7;
-  color: #ddd; 
+  color: #ddd;
 }
+
 
 .content p {
   font-family: 'Courier New', Courier, monospace;

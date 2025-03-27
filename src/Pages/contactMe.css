@@ -1,9 +1,40 @@
 .contactme-card {
+    max-width: 600px;
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 102, 196, 0.3);
+    margin: 0 auto;
     border-radius: 12px;
     padding: 2.5rem;
     margin-bottom: 2rem;
     box-shadow: 0 4px 20px rgba(255, 102, 196, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .confirmation-bubble {
+    background-color: rgba(255, 105, 180, 0.1);
+    color: #ff69b4;
+    border: 1px solid #ff69b4;
+    border-radius: 12px;
+    padding: 12px 18px;
+    margin: 20px auto 0;
+    font-size: 1rem;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    width: fit-content;
+    max-width: 90%;
+    box-shadow: 0 0 12px #ff69b4;
+    transition: opacity 0.5s ease;
+  }
+  
+  
+  
+  
+  
+  
+  
